@@ -1,0 +1,96 @@
+root = true
+
+########################################
+# Genel Ayarlar
+########################################
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+########################################
+# C# Dosyaları
+########################################
+
+[*.cs]
+
+# Girinti
+indent_style = space
+indent_size = 4
+
+########################################
+# Using / Namespace Kuralları
+########################################
+
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+########################################
+# var Kullanımı (KAPALI)
+########################################
+
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = false
+csharp_style_var_elsewhere = false
+
+########################################
+# this. Zorunluluğu
+########################################
+
+dotnet_style_qualification_for_field = true
+dotnet_style_qualification_for_property = true
+dotnet_style_qualification_for_method = true
+dotnet_style_qualification_for_event = true
+
+########################################
+# Süslü Parantez & Satır Kuralları
+########################################
+
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+
+########################################
+# Expression Body (KAPALI)
+########################################
+
+csharp_style_expression_bodied_methods = false
+csharp_style_expression_bodied_properties = false
+csharp_style_expression_bodied_constructors = false
+
+########################################
+# Async / Await Kuralları
+########################################
+
+dotnet_diagnostic.CA2007.severity = error
+
+########################################
+# Naming Kuralları
+########################################
+
+dotnet_naming_rule.interface_prefix_must_be_I.severity = error
+dotnet_naming_rule.interface_prefix_must_be_I.symbols = interface_symbols
+dotnet_naming_rule.interface_prefix_must_be_I.style = interface_prefix_style
+
+dotnet_naming_symbols.interface_symbols.applicable_kinds = interface
+dotnet_naming_symbols.interface_symbols.applicable_accessibilities = public, internal
+
+dotnet_naming_style.interface_prefix_style.required_prefix = I
+dotnet_naming_style.interface_prefix_style.capitalization = pascal_case
+
+########################################
+# Kod Kalitesi
+########################################
+
+dotnet_diagnostic.IDE0059.severity = error
+dotnet_diagnostic.IDE0060.severity = error
+
+########################################
+# Nullable & Güvenlik
+########################################
+
+dotnet_diagnostic.CS8618.severity = error
+dotnet_diagnostic.CS8602.severity = error

@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="WebApplication1/WebApplication1.csproj" />
+  <Project Path="WMovie2Gether.API/WMovie2Gether.API.csproj" />
+  <Project Path="WMovie2Gether.Application/WMovie2Gether.Application.csproj" />
+  <Project Path="WMovie2Gether.Domain/WMovie2Gether.Domain.csproj" />
+  <Project Path="WMovie2Gether.Infrastructure/WMovie2Gether.Infrastructure.csproj" />
 </Solution>

@@ -1,0 +1,6 @@
+@WMovie2Gether.API_HostAddress = http://localhost:5246
+
+GET {{WMovie2Gether.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
