@@ -30,6 +30,7 @@ public class UnitOfWork : IUnitOfWork
         object repository = repositoryType switch
         {
             _ when repositoryType == typeof(IUserRepository) => new UserRepository(context),
+            _ when repositoryType == typeof(IFolderRepository) => new FolderRepository(context),
             _ => throw new InvalidOperationException($"Repository of type {repositoryType.Name} is not registered.")
         };
 

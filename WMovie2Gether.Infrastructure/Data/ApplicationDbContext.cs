@@ -10,6 +10,7 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Folder> Folders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -19,6 +20,16 @@ public class ApplicationDbContext : DbContext
         {
             entity.HasIndex(u => u.Email).IsUnique();
             entity.HasIndex(u => u.Username).IsUnique();
+        });
+
+        modelBuilder.Entity<Folder>(entity =>
+        {
+            entity.HasOne(f => f.User)
+                  .WithMany(u => u.Folders)
+                  .HasForeignKey(f => f.UserId)
+                  .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasIndex(f => new { f.UserId, f.Name }).IsUnique();
         });
     }
 

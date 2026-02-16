@@ -12,6 +12,10 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UserMessages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\FolderMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FolderMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +23,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>UserMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\FolderMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FolderMessages.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 

@@ -18,10 +18,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // AutoMapper
-builder.Services.AddAutoMapper(typeof(UserMappingProfile));
+builder.Services.AddAutoMapper(typeof(UserMappingProfile), typeof(FolderMappingProfile));
 
 // Services
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IFolderService, FolderService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

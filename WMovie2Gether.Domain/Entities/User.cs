@@ -26,6 +26,9 @@ public class User : BaseEntity
 
     public DateTime? LastLoginAt { get; private set; }
 
+    // Navigation Properties
+    public ICollection<Folder> Folders { get; private set; } = new List<Folder>();
+
     public static User Create(string username, string email, string passwordHash, string? displayName = null)
     {
         return new User
